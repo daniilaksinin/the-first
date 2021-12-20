@@ -1,0 +1,15 @@
+@import "mixin.scss";
+@import "fonts.scss";
+
+//Header & Footer
+@import "blocks/header";
+@import "blocks/footer";
+
+//Blocks
+@import "blocks/hero";
+@import "blocks/persons";
+@import "blocks/interview";
+
+//Parts
+@import "parts/vars";
+@import "parts/basic";

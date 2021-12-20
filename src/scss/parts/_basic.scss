@@ -1,0 +1,128 @@
+*,*:before,*:after{
+    box-sizing: border-box;
+}
+
+h1,h2,h3,h4,h5,h6,p{
+    margin: 0;
+    padding: 0;
+}
+
+*:active,*:focus{outline: none;}
+
+input,textarea{font-family:inherit;resize: none;}
+
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+    display: inline-block;
+    color: inherit;
+}
+
+html{
+    overflow-x: hidden;
+}
+
+button{
+    border: none;
+    cursor: pointer;
+}
+
+body{
+    font-family: "Gramatika", Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+    font-size: 14px;
+    background: #E5E5E5;
+
+    margin: 0;
+
+    @media screen and (max-width: 576px) {
+        font-size: 12px;
+    }
+
+    //Scroll 
+    &::-webkit-scrollbar {
+    width: 10px;
+    background-color: #f9f9fd;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+        background-color: #000;
+    }
+    
+    &::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 6px rgba(0,0,0,0.2);
+        background-color: #f9f9fd;
+    }
+}
+
+.container{
+    padding-right: 30px;
+    padding-left: 30px;
+
+    @media screen and (max-width: 576px) {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+}
+
+.letters{
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    justify-content: space-between;
+    padding: 9px 0;
+
+    @media screen and (max-width: 768px) {
+        font-size: 12px;
+    }
+
+    @media screen and (max-width: 576px) {
+        font-size: 10px;
+    }
+
+    &-dark{
+        color: #fff;
+        background-color: transparent;
+        margin-top: 53px;
+    }
+}
+
+.title{
+    font-family: "Kudryashev";
+    color: #fff;
+    font-size: 80px;
+    line-height: 104%;
+
+    @media screen and (max-width: 992px) {
+        font-size: 60px;
+    } 
+
+    @media screen and (max-width: 576px) {
+        font-size: 40px;
+    } 
+}
+
+.ttuc{
+    text-transform: uppercase;
+}
+
+.no-scroll{
+    overflow: hidden;
+    height: 100vh;
+}
+
+[data-scroll] {
+    transition: all 1.5s;
+  }
+  [data-scroll="in"] {
+    opacity: 1;
+  }
+  [data-scroll="out"] {
+    opacity: 0;
+    transform: translateX(50px);
+  }

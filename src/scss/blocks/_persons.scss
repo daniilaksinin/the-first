@@ -1,0 +1,117 @@
+.persons{
+    padding-bottom: 124px;
+
+    @media screen and (max-width: 576px) {
+        padding-bottom: 60px;
+    }
+
+    &__grid{
+        display: grid; 
+        grid-template-columns: repeat(5, 1fr); 
+        grid-template-rows: 1fr 0.6fr; 
+        gap: 124px 16px; 
+        grid-template-areas: 
+            "b b . . ."
+            ". . . . ."; 
+        margin-top: 124px;
+
+        &--sc{
+            grid-template-areas: 
+            ". . . b b"
+            ". . . . ."; 
+        }
+
+        @media screen and (max-width: 1100px) {
+            grid-template-columns: repeat(3, 1fr); 
+            grid-template-areas: none;
+        }
+
+        @media screen and (max-width: 768px) {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 74px 16px;
+            margin-top: 64px;
+        }
+    }
+
+    &__item{
+
+        &--hidden{
+            @media screen and (max-width: 1100px) {
+                display: none;
+            }
+        }
+        
+        &--b{
+            grid-area: b;
+            @media screen and (max-width: 1100px) {
+                grid-area: auto;
+    
+            }
+        }
+
+        &-img{
+            width: 100%;
+        }
+
+        &-data{
+            margin-top: 8px;
+        }
+
+        &-name{
+            margin-top: 24px;
+            font-size: 24px;
+            font-family: "Kudryashev";
+
+            @media screen and (max-width: 576px) {
+                margin-top: 14px;
+                font-size: 18px;
+            }
+        }
+
+        &-text{
+            margin-top: 10px;
+            font-style: italic;
+            line-height: 120%;
+
+            height: 51px;
+
+            @media screen and (max-width: 1100px) {
+                height: 70px;
+            }
+            
+        }
+
+        &-wrap{
+            margin-top: 20px;
+
+            @media screen and (max-width: 576px) {
+                text-align: center;
+            }
+        }
+
+        &-tag{
+            text-transform: uppercase;
+            border: solid 1px #000;
+            border-radius: 28px;
+            padding: 0px 8px;
+
+            cursor: pointer;
+
+            transition: 0.2s ease-in-out;
+
+            &:hover{
+                background-color: #000;
+                color: #fff;
+            }
+
+            @media screen and (max-width: 1200px) {
+                font-size: 12px;
+            }
+
+            @media screen and (max-width: 576px) {
+                margin-top: 3px;
+                display: block;
+            }
+        }
+    }
+}

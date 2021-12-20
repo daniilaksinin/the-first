@@ -1,0 +1,68 @@
+.interview{
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    background: url(../img/interview-bg.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    color: #fff;
+    height: 744px;
+
+    @media screen and (max-width: 992px) {
+        height: 544px;
+    } 
+
+    @media screen and (max-width: 768px) {
+        height: auto;
+    } 
+
+    &__title{
+        display: none;
+        @media screen and (max-width: 768px) {
+            display: block;
+        } 
+    }
+
+    &__container{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+
+        height: 100%;
+    }
+
+    &__row{
+        display: flex;
+        justify-content: space-between;
+
+        &--bottom{
+            align-items: flex-end;
+
+            @media screen and (max-width: 768px) {
+                margin-top: 46px;
+            } 
+        }
+    }
+    
+
+    &__text{
+        text-indent: 48px;
+        font-style: italic;
+
+        margin-top: 96px;
+        max-width: 258px;
+
+        @media screen and (max-width: 768px) {
+            margin-top: 36px;
+        } 
+    }
+
+    &__name{
+        text-align: right;
+
+        @media screen and (max-width: 768px) {
+            display: none;
+        } 
+    }
+}

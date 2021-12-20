@@ -1,0 +1,11 @@
+@include font-face("Gramatika", "Gramatika-Regular", 400);
+@font-face {
+    font-family: "Gramatika";
+    src: url("../fonts/Gramatika-Italic");
+    src:url("../fonts/Gramatika-Italic.woff2") format("woff2"),url("../fonts/Gramatika-Italic.woff") format("woff");
+    font-style: italic;
+    font-weight: 400;
+    font-display:swap;
+}
+
+@include font-face("Kudryashev", "Kudryashev-Regular", 400);

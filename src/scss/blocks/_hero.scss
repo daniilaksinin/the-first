@@ -1,0 +1,229 @@
+.hero{
+    background-image: url(../img/hero-bg.png);
+    background-size: cover;
+    background-position: center;
+    padding-top: 90px;
+    padding-bottom: 32px;
+
+    color: #FFFFFF;
+
+    &__container{
+        position: relative;
+        height: 1100px;
+
+        @media screen and (max-width: 768px) {
+            height: 700px;
+        }
+
+        @media screen and (max-width: 576px) {
+            height: 600px;
+        }
+    }
+
+    &__col{
+        margin: 0 auto;
+        max-width: 936px;
+
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        @media screen and (max-width: 1100px) {
+            padding: 0 55px;
+        }
+
+        @media screen and (max-width: 992px) {
+            justify-content: start;
+            align-items: center;
+        }
+        
+        &-r{
+            margin-top: 96px;
+            text-align: right;
+            position: absolute;
+            right: 30px;
+
+            top: 50%;
+            transform: translateY(-50%);
+
+            @media screen and (max-width: 992px) {
+                position: unset;
+                transform: unset;
+            }
+        }
+    }
+
+    &__text{
+        line-height: 120%;
+        letter-spacing: 0.06em;
+
+        @media screen and (max-width: 992px) {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        &-caption{
+            margin-top: 47px;
+            text-transform: uppercase;
+            display: block;
+            text-indent: 0;
+        }
+
+        &-phrase{
+            max-width: 220px;
+            font-style: italic;
+            text-indent: 20px;
+
+            @media screen and (max-width: 992px) {
+                max-width: 320px;
+            }
+        }
+        
+    }
+
+    &__title{
+        @media screen and (max-width: 1100px) {
+            display: none;
+        }
+
+        
+
+        &--mob{
+            display: none;
+            margin-top: 30px;
+
+            @media screen and (max-width: 1100px) {
+                display: block;
+            }
+
+            @media screen and (max-width: 992px) {
+                text-align: center;
+            }
+        }
+
+        span{
+            display: block;
+            margin-right: 330px;
+        }
+    }
+
+    &__pagination{
+        margin-top: 96px;
+        letter-spacing: 0.06em;
+
+        @media screen and (max-width: 992px) {
+            position: absolute;
+            bottom: 15px ;
+            right: 15px;
+        }
+
+        &-item{
+            margin-left: 16px;
+            &:first-child{
+                margin-left: 0;
+            }
+        }
+
+        &-line{
+            display: inline-block;
+            height: 1px;
+            width: 47px;
+            position: relative;
+
+            background-color: rgba(255,255,255,0.5);
+
+            &--fill{
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 1px;
+                width: 19px;
+
+                background-color: #fff;
+                opacity: 1;
+            }
+        }
+    }
+
+    &__offer{
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: #000;
+
+        position: absolute;
+        width: 64px;
+        height: 64px;
+
+        border-radius: 100%;
+        font-size: 12px;
+
+        left: 30px;
+        bottom: 30px;
+
+        text-transform: uppercase;
+
+        background-color: #fff;
+        transition: 0.2s ease-in-out;
+
+        &:hover{
+            transform: scale(1.15);
+        }
+
+        @media screen and (max-width: 576px) {
+            bottom: 15px;
+        }
+    }
+
+    &__logo{
+        text-align: center;
+
+        img{
+            
+            @media screen and (max-width: 1075px) {
+                width: 100%;
+            }
+        }
+
+    }
+
+    &__social{
+        position: absolute;
+        left: 30px;
+        top: 50%;
+        transform: translateY(-50%);
+
+        &-item{
+            margin-top: 60px;
+
+            @media screen and (max-width: 768px) {
+                margin-top: 52px;
+            }
+
+            &:first-child{
+                margin-top: 0;
+            }
+        }
+
+        &-link{
+            color: #fff;
+            text-transform: uppercase;
+            border-radius: 100%;
+            width: 30px;
+            height: 30px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            transition: 0.2s ease-in-out;
+
+            &:hover{
+                color: #000;
+                background-color: #fff;
+            }
+        }
+    }
+}
